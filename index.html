@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b14"><meta name="description" content="Maxiel Domain Control — pengelola nama internal .tex gratis berbasis GitHub Pages.">
+<title>Maxiel Domain Control</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<header class="topbar"><a class="brand" href="#home"><span class="logo">M</span><span>MAXIEL <small>DOMAIN CONTROL</small></span></a><span class="pill"><i></i> STATIC MODE</span></header>
+<main>
+<section id="home" class="hero"><div class="eyebrow">✦ FREE · OPEN SOURCE · GITHUB PAGES</div><h1>Nama unik.<br><span>Tujuan bebas.</span></h1><p>Kelola nama internal berakhiran <b>.tex</b> dan arahkan pengunjung ke website publikmu. Tanpa server backend dan tanpa biaya hosting.</p><div class="hero-actions"><a class="btn primary" href="#manage">＋ Buat nama</a><a class="btn secondary" href="#how">Cara kerja ↘</a></div><div class="notice"><b>Info penting</b><span>.tex di sini adalah nama internal layanan Maxiel, bukan domain internet global. Link publik bekerja setelah daftar domain dipublikasikan ke GitHub Pages.</span></div></section>
+<section class="stats"><div class="stat"><span>Nama dipublikasikan</span><strong id="statPublished">—</strong></div><div class="stat"><span>Draft perangkat ini</span><strong id="statDraft">0</strong></div><div class="stat"><span>Mode penyimpanan</span><strong>Static JSON</strong></div></section>
+<section id="manage" class="panel"><div class="section-head"><div><div class="eyebrow">CONTROL CENTER</div><h2>Kelola nama .tex</h2><p>Buat nama dan sambungkan ke URL publik.</p></div><span class="tag">ADMIN LOKAL</span></div>
+<form id="domainForm"><input type="hidden" id="editId"><label for="domainName">Nama yang kamu inginkan</label><div class="domain-input"><input id="domainName" placeholder="misalnya maxiel" maxlength="40" autocomplete="off" required><span>.tex</span></div><small class="hint">Huruf kecil, angka, dan tanda hubung. Jangan mulai/akhir dengan tanda hubung.</small>
+<label for="targetUrl">URL tujuan website</label><input id="targetUrl" type="url" placeholder="https://namakamu.github.io/proyek/" required><small class="hint">Gunakan URL HTTPS yang memang kamu miliki atau boleh kamu arahkan.</small>
+<label for="description">Catatan (opsional)</label><input id="description" maxlength="100" placeholder="Website utama Maxiel">
+<div class="form-actions"><button class="btn primary" type="submit" id="saveBtn">Simpan nama</button><button class="btn secondary hidden" type="button" id="cancelEdit">Batal edit</button></div><p id="formMessage" class="message" role="status"></p></form>
+<div class="toolbar"><div><h3>Daftar nama</h3><p id="listSub">Memuat daftar publik…</p></div><input id="searchInput" class="search" placeholder="Cari nama…" aria-label="Cari nama"></div>
+<div id="domainList" class="domain-list"><div class="empty">Memuat daftar nama…</div></div>
+<div class="export-row"><button id="exportBtn" class="btn secondary">↓ Ekspor domains.json</button><label class="btn secondary upload-label">↑ Impor JSON<input id="importFile" type="file" accept="application/json,.json" hidden></label></div>
+<p class="hint bottom-hint">Nama baru tersimpan sebagai draft di browser ini. Ekspor file JSON, lalu unggah/ganti <code>domains.json</code> di repository GitHub agar daftar dan link bisa digunakan pengunjung lain.</p>
+</section>
+<section id="how" class="panel how"><div class="eyebrow">CARA KERJA</div><h2>Publikasikan dalam 3 langkah</h2><div class="steps"><article><b>01</b><h3>Buat nama</h3><p>Misalnya <code>maxiel.tex</code>, lalu masukkan URL GitHub Pages sebagai tujuan.</p></article><article><b>02</b><h3>Ekspor JSON</h3><p>Unduh daftar domain, lalu unggah file <code>domains.json</code> ke root repository.</p></article><article><b>03</b><h3>Bagikan link</h3><p>Setelah Pages diperbarui, bagikan link pengalihan Maxiel untuk nama yang sudah dipublikasikan.</p></article></div><div class="notice"><b>Privasi & keamanan</b><span>Ini aplikasi statis tanpa akun admin sungguhan. Siapa pun yang dapat mengedit repository dapat mengubah daftar publik. Jangan simpan token atau kata sandi di sini.</span></div></section>
+<footer>MAXIEL DOMAIN CONTROL <span>Made for GitHub Pages · v1.0</span></footer>
+</main><div id="toast" class="toast" role="status"></div><script src="app.js"></script>
+</body></html>
